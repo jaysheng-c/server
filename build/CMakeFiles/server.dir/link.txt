@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -ggdb -fPIC -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations  -rdynamic CMakeFiles/server.dir/test/main.cpp.o  -o ../bin/server  -L/apps/yoshino/lib  -L/apps/yoshino/lib64 
