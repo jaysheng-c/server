@@ -114,17 +114,137 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named server
+# Target rules for targets named test_config
 
 # Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 server
-.PHONY : server
+test_config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_config
+.PHONY : test_config
 
 # fast build rule for target.
-server/fast:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-.PHONY : server/fast
+test_config/fast:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
+.PHONY : test_config/fast
+
+#=============================================================================
+# Target rules for targets named jaysheng
+
+# Build rule for target.
+jaysheng: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 jaysheng
+.PHONY : jaysheng
+
+# fast build rule for target.
+jaysheng/fast:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/build
+.PHONY : jaysheng/fast
+
+#=============================================================================
+# Target rules for targets named test_log
+
+# Build rule for target.
+test_log: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_log
+.PHONY : test_log
+
+# fast build rule for target.
+test_log/fast:
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/build
+.PHONY : test_log/fast
+
+#=============================================================================
+# Target rules for targets named test_yaml
+
+# Build rule for target.
+test_yaml: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_yaml
+.PHONY : test_yaml
+
+# fast build rule for target.
+test_yaml/fast:
+	$(MAKE) -f CMakeFiles/test_yaml.dir/build.make CMakeFiles/test_yaml.dir/build
+.PHONY : test_yaml/fast
+
+jaysheng/config.o: jaysheng/config.cpp.o
+
+.PHONY : jaysheng/config.o
+
+# target to build an object file
+jaysheng/config.cpp.o:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/config.cpp.o
+.PHONY : jaysheng/config.cpp.o
+
+jaysheng/config.i: jaysheng/config.cpp.i
+
+.PHONY : jaysheng/config.i
+
+# target to preprocess a source file
+jaysheng/config.cpp.i:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/config.cpp.i
+.PHONY : jaysheng/config.cpp.i
+
+jaysheng/config.s: jaysheng/config.cpp.s
+
+.PHONY : jaysheng/config.s
+
+# target to generate assembly for a file
+jaysheng/config.cpp.s:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/config.cpp.s
+.PHONY : jaysheng/config.cpp.s
+
+jaysheng/log.o: jaysheng/log.cpp.o
+
+.PHONY : jaysheng/log.o
+
+# target to build an object file
+jaysheng/log.cpp.o:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o
+.PHONY : jaysheng/log.cpp.o
+
+jaysheng/log.i: jaysheng/log.cpp.i
+
+.PHONY : jaysheng/log.i
+
+# target to preprocess a source file
+jaysheng/log.cpp.i:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/log.cpp.i
+.PHONY : jaysheng/log.cpp.i
+
+jaysheng/log.s: jaysheng/log.cpp.s
+
+.PHONY : jaysheng/log.s
+
+# target to generate assembly for a file
+jaysheng/log.cpp.s:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/log.cpp.s
+.PHONY : jaysheng/log.cpp.s
+
+jaysheng/util.o: jaysheng/util.cpp.o
+
+.PHONY : jaysheng/util.o
+
+# target to build an object file
+jaysheng/util.cpp.o:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/util.cpp.o
+.PHONY : jaysheng/util.cpp.o
+
+jaysheng/util.i: jaysheng/util.cpp.i
+
+.PHONY : jaysheng/util.i
+
+# target to preprocess a source file
+jaysheng/util.cpp.i:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/util.cpp.i
+.PHONY : jaysheng/util.cpp.i
+
+jaysheng/util.s: jaysheng/util.cpp.s
+
+.PHONY : jaysheng/util.s
+
+# target to generate assembly for a file
+jaysheng/util.cpp.s:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/util.cpp.s
+.PHONY : jaysheng/util.cpp.s
 
 test/main.o: test/main.cpp.o
 
@@ -132,7 +252,7 @@ test/main.o: test/main.cpp.o
 
 # target to build an object file
 test/main.cpp.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/test/main.cpp.o
+	$(MAKE) -f CMakeFiles/test_yaml.dir/build.make CMakeFiles/test_yaml.dir/test/main.cpp.o
 .PHONY : test/main.cpp.o
 
 test/main.i: test/main.cpp.i
@@ -141,7 +261,7 @@ test/main.i: test/main.cpp.i
 
 # target to preprocess a source file
 test/main.cpp.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/test/main.cpp.i
+	$(MAKE) -f CMakeFiles/test_yaml.dir/build.make CMakeFiles/test_yaml.dir/test/main.cpp.i
 .PHONY : test/main.cpp.i
 
 test/main.s: test/main.cpp.s
@@ -150,8 +270,62 @@ test/main.s: test/main.cpp.s
 
 # target to generate assembly for a file
 test/main.cpp.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/test/main.cpp.s
+	$(MAKE) -f CMakeFiles/test_yaml.dir/build.make CMakeFiles/test_yaml.dir/test/main.cpp.s
 .PHONY : test/main.cpp.s
+
+test/test_config.o: test/test_config.cpp.o
+
+.PHONY : test/test_config.o
+
+# target to build an object file
+test/test_config.cpp.o:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/test/test_config.cpp.o
+.PHONY : test/test_config.cpp.o
+
+test/test_config.i: test/test_config.cpp.i
+
+.PHONY : test/test_config.i
+
+# target to preprocess a source file
+test/test_config.cpp.i:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/test/test_config.cpp.i
+.PHONY : test/test_config.cpp.i
+
+test/test_config.s: test/test_config.cpp.s
+
+.PHONY : test/test_config.s
+
+# target to generate assembly for a file
+test/test_config.cpp.s:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/test/test_config.cpp.s
+.PHONY : test/test_config.cpp.s
+
+test/test_log.o: test/test_log.cpp.o
+
+.PHONY : test/test_log.o
+
+# target to build an object file
+test/test_log.cpp.o:
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/test/test_log.cpp.o
+.PHONY : test/test_log.cpp.o
+
+test/test_log.i: test/test_log.cpp.i
+
+.PHONY : test/test_log.i
+
+# target to preprocess a source file
+test/test_log.cpp.i:
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/test/test_log.cpp.i
+.PHONY : test/test_log.cpp.i
+
+test/test_log.s: test/test_log.cpp.s
+
+.PHONY : test/test_log.s
+
+# target to generate assembly for a file
+test/test_log.cpp.s:
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/test/test_log.cpp.s
+.PHONY : test/test_log.cpp.s
 
 # Help Target
 help:
@@ -159,12 +333,30 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... test_config"
 	@echo "... rebuild_cache"
-	@echo "... server"
+	@echo "... jaysheng"
+	@echo "... test_log"
 	@echo "... edit_cache"
+	@echo "... test_yaml"
+	@echo "... jaysheng/config.o"
+	@echo "... jaysheng/config.i"
+	@echo "... jaysheng/config.s"
+	@echo "... jaysheng/log.o"
+	@echo "... jaysheng/log.i"
+	@echo "... jaysheng/log.s"
+	@echo "... jaysheng/util.o"
+	@echo "... jaysheng/util.i"
+	@echo "... jaysheng/util.s"
 	@echo "... test/main.o"
 	@echo "... test/main.i"
 	@echo "... test/main.s"
+	@echo "... test/test_config.o"
+	@echo "... test/test_config.i"
+	@echo "... test/test_config.s"
+	@echo "... test/test_log.o"
+	@echo "... test/test_log.i"
+	@echo "... test/test_log.s"
 .PHONY : help
 
 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -shared -Wl,-soname,libjaysheng.so -o ../lib/libjaysheng.so CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o CMakeFiles/jaysheng.dir/jaysheng/util.cpp.o CMakeFiles/jaysheng.dir/jaysheng/config.cpp.o  -L/apps/yoshino/lib  -L/apps/yoshino/lib64 

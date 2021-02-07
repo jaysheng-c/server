@@ -1,0 +1,1 @@
+/usr/bin/c++   -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -rdynamic CMakeFiles/test_yaml.dir/test/main.cpp.o  -o ../bin/test_yaml  -L/apps/yoshino/lib  -L/apps/yoshino/lib64 -Wl,-rpath,/apps/yoshino/lib:/apps/yoshino/lib64 /apps/yoshino/lib/libyaml-cpp.so.0.6.0 
