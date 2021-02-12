@@ -62,7 +62,7 @@ void config() {
     XX_M(g_str_int_map_value_config, int_uset, before);
     XX_M(g_str_int_umap_value_config, int_uset, before);
 
-    YAML::Node root = YAML::LoadFile("E:/IDE/_ProgramFile/C_Program/Mystery/Mystery/config/test.yml");
+    YAML::Node root = YAML::LoadFile("../config/test.yml");
     jaysheng::Config::LoadFromYaml(root);
 
     JAYSHENG_LOG_INFO(JAYSHENG_LOG_ROOT()) << "after: " << g_int_value_config->getValue();
@@ -102,7 +102,7 @@ void print_yaml(YAML::Node &node, int level) {
 
 void test_yaml() {
 
-    YAML::Node root = YAML::LoadFile("E:/IDE/_ProgramFile/C_Program/Mystery/Mystery/config/test.yml");
+    YAML::Node root = YAML::LoadFile("../config/test.yml");
     print_yaml(root, 0);
     //JAYSHENG_LOG_INFO(JAYSHENG_LOG_ROOT()) << root;
 }
@@ -186,7 +186,7 @@ void test_class() {
     XX_PM(g_person_map, "class.map before");
     JAYSHENG_LOG_INFO(JAYSHENG_LOG_ROOT()) << "before: " << g_person_vec_map->toString();
 
-    YAML::Node root = YAML::LoadFile("E:/IDE/_ProgramFile/C_Program/Mystery/Mystery/config/test.yml");
+    YAML::Node root = YAML::LoadFile("../config/test.yml");
     jaysheng::Config::LoadFromYaml(root);
 
     JAYSHENG_LOG_INFO(JAYSHENG_LOG_ROOT()) << "after: " << g_person->getValue().toString() << " - " << g_person->toString();
@@ -199,7 +199,7 @@ void test_log() {
     //static jaysheng::Logger::ptr root_log = JAYSHENG_LOG_ROOT();
     JAYSHENG_LOG_INFO(system_log) << "hello system1" << std::endl;
     std::cout << jaysheng::LoggerMgr::GetInstance()->toYamlString() << std::endl;
-    YAML::Node root = YAML::LoadFile("E:/IDE/_ProgramFile/C_Program/Mystery/Mystery/config/log.yml");
+    YAML::Node root = YAML::LoadFile("../config/log.yml");
     jaysheng::Config::LoadFromYaml(root);
     std::cout << "=====================" << std::endl;
     std::cout << jaysheng::LoggerMgr::GetInstance()->toYamlString() << std::endl;
@@ -220,7 +220,7 @@ void test_log() {
 int main(int argc, char **argv) {
     // test_yaml();
     // test_config();
-    // test_class();
+    test_class();
     // test_log();
     // jaysheng::EnvMgr::GetInstance()->init(argc, argv);
     // test_loadconf();

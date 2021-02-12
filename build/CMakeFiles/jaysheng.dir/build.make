@@ -99,11 +99,53 @@ CMakeFiles/jaysheng.dir/jaysheng/config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jaysheng.dir/jaysheng/config.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/workspace/server/jaysheng/config.cpp -o CMakeFiles/jaysheng.dir/jaysheng/config.cpp.s
 
+CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o: CMakeFiles/jaysheng.dir/flags.make
+CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o: ../jaysheng/mutex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o -c /root/workspace/server/jaysheng/mutex.cpp
+
+CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/workspace/server/jaysheng/mutex.cpp > CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.i
+
+CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/workspace/server/jaysheng/mutex.cpp -o CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.s
+
+CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o: CMakeFiles/jaysheng.dir/flags.make
+CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o: ../jaysheng/thread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o -c /root/workspace/server/jaysheng/thread.cpp
+
+CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/workspace/server/jaysheng/thread.cpp > CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.i
+
+CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/workspace/server/jaysheng/thread.cpp -o CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.s
+
+CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o: CMakeFiles/jaysheng.dir/flags.make
+CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o: ../jaysheng/fiber.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o -c /root/workspace/server/jaysheng/fiber.cpp
+
+CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/workspace/server/jaysheng/fiber.cpp > CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.i
+
+CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/workspace/server/jaysheng/fiber.cpp -o CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.s
+
 # Object files for target jaysheng
 jaysheng_OBJECTS = \
 "CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o" \
 "CMakeFiles/jaysheng.dir/jaysheng/util.cpp.o" \
-"CMakeFiles/jaysheng.dir/jaysheng/config.cpp.o"
+"CMakeFiles/jaysheng.dir/jaysheng/config.cpp.o" \
+"CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o" \
+"CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o" \
+"CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o"
 
 # External object files for target jaysheng
 jaysheng_EXTERNAL_OBJECTS =
@@ -111,9 +153,12 @@ jaysheng_EXTERNAL_OBJECTS =
 ../lib/libjaysheng.so: CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o
 ../lib/libjaysheng.so: CMakeFiles/jaysheng.dir/jaysheng/util.cpp.o
 ../lib/libjaysheng.so: CMakeFiles/jaysheng.dir/jaysheng/config.cpp.o
+../lib/libjaysheng.so: CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o
+../lib/libjaysheng.so: CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o
+../lib/libjaysheng.so: CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o
 ../lib/libjaysheng.so: CMakeFiles/jaysheng.dir/build.make
 ../lib/libjaysheng.so: CMakeFiles/jaysheng.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library ../lib/libjaysheng.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library ../lib/libjaysheng.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/jaysheng.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

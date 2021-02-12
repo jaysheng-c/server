@@ -33,27 +33,37 @@ find_package(yaml-cpp)
 set(JAYSHENG_LIB jaysheng/log.cpp
                  jaysheng/util.cpp
                  jaysheng/config.cpp
+                 jaysheng/mutex.cpp
+                 jaysheng/thread.cpp
+                 jaysheng/fiber.cpp
     )
 
 add_library(jaysheng SHARED ${JAYSHENG_LIB})
 
 set(LIBS
         ${jaysheng}
-        # ${YAMLCPP}
+        ${YAMLCPP}
         # ${PTHREAD}
-        yaml-cpp
+        # yaml-cpp
     )
 # message ("LIBS " ${LIBS})
 
-add_executable(test_log test/test_log.cpp)
+add_executable(test_log test/test_log.cpp )
 add_dependencies(test_log jaysheng)
-target_link_libraries(test_log jaysheng -lyaml-cpp)
-# target_link_libraries(test_log jaysheng)
+target_link_libraries(test_log jaysheng -lyaml-cpp -pthread)
+# target_link_libraries(test_log ${LIBS})
 
 add_executable(test_config test/test_config.cpp)
 add_dependencies(test_config jaysheng)
-target_link_libraries(test_config jaysheng -lyaml-cpp)
+target_link_libraries(test_config jaysheng -lyaml-cpp -pthread)
 
 add_executable(test_yaml test/main.cpp)
 target_link_libraries(test_yaml yaml-cpp)
 
+add_executable(test_thread test/test_thread.cpp)
+add_dependencies(test_thread jaysheng)
+target_link_libraries(test_thread -pthread jaysheng -lyaml-cpp )
+
+add_executable(test_fiber test/test_fiber.cpp)
+add_dependencies(test_fiber jaysheng)
+target_link_libraries(test_fiber -pthread jaysheng -lyaml-cpp )

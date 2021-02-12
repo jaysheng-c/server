@@ -39,6 +39,13 @@ CMakeFiles/jaysheng.dir/jaysheng/config.cpp.o: ../jaysheng/log.h
 CMakeFiles/jaysheng.dir/jaysheng/config.cpp.o: ../jaysheng/singleton.h
 CMakeFiles/jaysheng.dir/jaysheng/config.cpp.o: ../jaysheng/util.h
 
+CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o: ../jaysheng/fiber.cpp
+CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o: ../jaysheng/fiber.h
+CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o: ../jaysheng/log.h
+CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o: ../jaysheng/macro.h
+CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o: ../jaysheng/singleton.h
+CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o: ../jaysheng/util.h
+
 CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o: /apps/yoshino/include/yaml-cpp/binary.h
 CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o: /apps/yoshino/include/yaml-cpp/dll.h
 CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o: /apps/yoshino/include/yaml-cpp/emitter.h
@@ -77,6 +84,20 @@ CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o: ../jaysheng/log.h
 CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o: ../jaysheng/singleton.h
 CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o: ../jaysheng/util.h
 
+CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o: ../jaysheng/base/noncopy.h
+CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o: ../jaysheng/mutex.cpp
+CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o: ../jaysheng/mutex.h
+
+CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o: ../jaysheng/base/noncopy.h
+CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o: ../jaysheng/log.h
+CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o: ../jaysheng/mutex.h
+CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o: ../jaysheng/singleton.h
+CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o: ../jaysheng/thread.cpp
+CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o: ../jaysheng/thread.h
+CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o: ../jaysheng/util.h
+
+CMakeFiles/jaysheng.dir/jaysheng/util.cpp.o: ../jaysheng/log.h
+CMakeFiles/jaysheng.dir/jaysheng/util.cpp.o: ../jaysheng/singleton.h
 CMakeFiles/jaysheng.dir/jaysheng/util.cpp.o: ../jaysheng/util.cpp
 CMakeFiles/jaysheng.dir/jaysheng/util.cpp.o: ../jaysheng/util.h
 

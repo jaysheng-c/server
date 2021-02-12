@@ -59,17 +59,6 @@ CMAKE_BINARY_DIR = /root/workspace/server/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/apps/yoshino/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -80,6 +69,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/apps/yoshino/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -114,6 +114,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_fiber
+
+# Build rule for target.
+test_fiber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
+.PHONY : test_fiber
+
+# fast build rule for target.
+test_fiber/fast:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+.PHONY : test_fiber/fast
+
+#=============================================================================
+# Target rules for targets named test_log
+
+# Build rule for target.
+test_log: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_log
+.PHONY : test_log
+
+# fast build rule for target.
+test_log/fast:
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/build
+.PHONY : test_log/fast
+
+#=============================================================================
 # Target rules for targets named test_config
 
 # Build rule for target.
@@ -140,19 +166,6 @@ jaysheng/fast:
 .PHONY : jaysheng/fast
 
 #=============================================================================
-# Target rules for targets named test_log
-
-# Build rule for target.
-test_log: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_log
-.PHONY : test_log
-
-# fast build rule for target.
-test_log/fast:
-	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/build
-.PHONY : test_log/fast
-
-#=============================================================================
 # Target rules for targets named test_yaml
 
 # Build rule for target.
@@ -164,6 +177,19 @@ test_yaml: cmake_check_build_system
 test_yaml/fast:
 	$(MAKE) -f CMakeFiles/test_yaml.dir/build.make CMakeFiles/test_yaml.dir/build
 .PHONY : test_yaml/fast
+
+#=============================================================================
+# Target rules for targets named test_thread
+
+# Build rule for target.
+test_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
+
+# fast build rule for target.
+test_thread/fast:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
 
 jaysheng/config.o: jaysheng/config.cpp.o
 
@@ -192,6 +218,33 @@ jaysheng/config.cpp.s:
 	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/config.cpp.s
 .PHONY : jaysheng/config.cpp.s
 
+jaysheng/fiber.o: jaysheng/fiber.cpp.o
+
+.PHONY : jaysheng/fiber.o
+
+# target to build an object file
+jaysheng/fiber.cpp.o:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o
+.PHONY : jaysheng/fiber.cpp.o
+
+jaysheng/fiber.i: jaysheng/fiber.cpp.i
+
+.PHONY : jaysheng/fiber.i
+
+# target to preprocess a source file
+jaysheng/fiber.cpp.i:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.i
+.PHONY : jaysheng/fiber.cpp.i
+
+jaysheng/fiber.s: jaysheng/fiber.cpp.s
+
+.PHONY : jaysheng/fiber.s
+
+# target to generate assembly for a file
+jaysheng/fiber.cpp.s:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.s
+.PHONY : jaysheng/fiber.cpp.s
+
 jaysheng/log.o: jaysheng/log.cpp.o
 
 .PHONY : jaysheng/log.o
@@ -218,6 +271,60 @@ jaysheng/log.s: jaysheng/log.cpp.s
 jaysheng/log.cpp.s:
 	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/log.cpp.s
 .PHONY : jaysheng/log.cpp.s
+
+jaysheng/mutex.o: jaysheng/mutex.cpp.o
+
+.PHONY : jaysheng/mutex.o
+
+# target to build an object file
+jaysheng/mutex.cpp.o:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o
+.PHONY : jaysheng/mutex.cpp.o
+
+jaysheng/mutex.i: jaysheng/mutex.cpp.i
+
+.PHONY : jaysheng/mutex.i
+
+# target to preprocess a source file
+jaysheng/mutex.cpp.i:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.i
+.PHONY : jaysheng/mutex.cpp.i
+
+jaysheng/mutex.s: jaysheng/mutex.cpp.s
+
+.PHONY : jaysheng/mutex.s
+
+# target to generate assembly for a file
+jaysheng/mutex.cpp.s:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.s
+.PHONY : jaysheng/mutex.cpp.s
+
+jaysheng/thread.o: jaysheng/thread.cpp.o
+
+.PHONY : jaysheng/thread.o
+
+# target to build an object file
+jaysheng/thread.cpp.o:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o
+.PHONY : jaysheng/thread.cpp.o
+
+jaysheng/thread.i: jaysheng/thread.cpp.i
+
+.PHONY : jaysheng/thread.i
+
+# target to preprocess a source file
+jaysheng/thread.cpp.i:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.i
+.PHONY : jaysheng/thread.cpp.i
+
+jaysheng/thread.s: jaysheng/thread.cpp.s
+
+.PHONY : jaysheng/thread.s
+
+# target to generate assembly for a file
+jaysheng/thread.cpp.s:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.s
+.PHONY : jaysheng/thread.cpp.s
 
 jaysheng/util.o: jaysheng/util.cpp.o
 
@@ -300,6 +407,33 @@ test/test_config.cpp.s:
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/test/test_config.cpp.s
 .PHONY : test/test_config.cpp.s
 
+test/test_fiber.o: test/test_fiber.cpp.o
+
+.PHONY : test/test_fiber.o
+
+# target to build an object file
+test/test_fiber.cpp.o:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/test/test_fiber.cpp.o
+.PHONY : test/test_fiber.cpp.o
+
+test/test_fiber.i: test/test_fiber.cpp.i
+
+.PHONY : test/test_fiber.i
+
+# target to preprocess a source file
+test/test_fiber.cpp.i:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/test/test_fiber.cpp.i
+.PHONY : test/test_fiber.cpp.i
+
+test/test_fiber.s: test/test_fiber.cpp.s
+
+.PHONY : test/test_fiber.s
+
+# target to generate assembly for a file
+test/test_fiber.cpp.s:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/test/test_fiber.cpp.s
+.PHONY : test/test_fiber.cpp.s
+
 test/test_log.o: test/test_log.cpp.o
 
 .PHONY : test/test_log.o
@@ -327,24 +461,62 @@ test/test_log.cpp.s:
 	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/test/test_log.cpp.s
 .PHONY : test/test_log.cpp.s
 
+test/test_thread.o: test/test_thread.cpp.o
+
+.PHONY : test/test_thread.o
+
+# target to build an object file
+test/test_thread.cpp.o:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.o
+.PHONY : test/test_thread.cpp.o
+
+test/test_thread.i: test/test_thread.cpp.i
+
+.PHONY : test/test_thread.i
+
+# target to preprocess a source file
+test/test_thread.cpp.i:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.i
+.PHONY : test/test_thread.cpp.i
+
+test/test_thread.s: test/test_thread.cpp.s
+
+.PHONY : test/test_thread.s
+
+# target to generate assembly for a file
+test/test_thread.cpp.s:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.s
+.PHONY : test/test_thread.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... test_fiber"
+	@echo "... edit_cache"
+	@echo "... test_log"
 	@echo "... test_config"
 	@echo "... rebuild_cache"
 	@echo "... jaysheng"
-	@echo "... test_log"
-	@echo "... edit_cache"
 	@echo "... test_yaml"
+	@echo "... test_thread"
 	@echo "... jaysheng/config.o"
 	@echo "... jaysheng/config.i"
 	@echo "... jaysheng/config.s"
+	@echo "... jaysheng/fiber.o"
+	@echo "... jaysheng/fiber.i"
+	@echo "... jaysheng/fiber.s"
 	@echo "... jaysheng/log.o"
 	@echo "... jaysheng/log.i"
 	@echo "... jaysheng/log.s"
+	@echo "... jaysheng/mutex.o"
+	@echo "... jaysheng/mutex.i"
+	@echo "... jaysheng/mutex.s"
+	@echo "... jaysheng/thread.o"
+	@echo "... jaysheng/thread.i"
+	@echo "... jaysheng/thread.s"
 	@echo "... jaysheng/util.o"
 	@echo "... jaysheng/util.i"
 	@echo "... jaysheng/util.s"
@@ -354,9 +526,15 @@ help:
 	@echo "... test/test_config.o"
 	@echo "... test/test_config.i"
 	@echo "... test/test_config.s"
+	@echo "... test/test_fiber.o"
+	@echo "... test/test_fiber.i"
+	@echo "... test/test_fiber.s"
 	@echo "... test/test_log.o"
 	@echo "... test/test_log.i"
 	@echo "... test/test_log.s"
+	@echo "... test/test_thread.o"
+	@echo "... test/test_thread.i"
+	@echo "... test/test_thread.s"
 .PHONY : help
 
 

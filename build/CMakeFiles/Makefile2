@@ -56,18 +56,22 @@ CMAKE_BINARY_DIR = /root/workspace/server/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/test_fiber.dir/all
+all: CMakeFiles/test_log.dir/all
 all: CMakeFiles/test_config.dir/all
 all: CMakeFiles/jaysheng.dir/all
-all: CMakeFiles/test_log.dir/all
 all: CMakeFiles/test_yaml.dir/all
+all: CMakeFiles/test_thread.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
+clean: CMakeFiles/test_fiber.dir/clean
+clean: CMakeFiles/test_log.dir/clean
 clean: CMakeFiles/test_config.dir/clean
 clean: CMakeFiles/jaysheng.dir/clean
-clean: CMakeFiles/test_log.dir/clean
 clean: CMakeFiles/test_yaml.dir/clean
+clean: CMakeFiles/test_thread.dir/clean
 
 .PHONY : clean
 
@@ -77,18 +81,72 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
+# Target rules for target CMakeFiles/test_fiber.dir
+
+# All Build rule for target.
+CMakeFiles/test_fiber.dir/all: CMakeFiles/jaysheng.dir/all
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/depend
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=10,11 "Built target test_fiber"
+.PHONY : CMakeFiles/test_fiber.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_fiber.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 9
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_fiber.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_fiber.dir/rule
+
+# Convenience name for target.
+test_fiber: CMakeFiles/test_fiber.dir/rule
+
+.PHONY : test_fiber
+
+# clean rule for target.
+CMakeFiles/test_fiber.dir/clean:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/clean
+.PHONY : CMakeFiles/test_fiber.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_log.dir
+
+# All Build rule for target.
+CMakeFiles/test_log.dir/all: CMakeFiles/jaysheng.dir/all
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/depend
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=12,13 "Built target test_log"
+.PHONY : CMakeFiles/test_log.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_log.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 9
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_log.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_log.dir/rule
+
+# Convenience name for target.
+test_log: CMakeFiles/test_log.dir/rule
+
+.PHONY : test_log
+
+# clean rule for target.
+CMakeFiles/test_log.dir/clean:
+	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/clean
+.PHONY : CMakeFiles/test_log.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test_config.dir
 
 # All Build rule for target.
 CMakeFiles/test_config.dir/all: CMakeFiles/jaysheng.dir/all
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/depend
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=5,6 "Built target test_config"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=8,9 "Built target test_config"
 .PHONY : CMakeFiles/test_config.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_config.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_config.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_config.dir/rule
@@ -110,12 +168,12 @@ CMakeFiles/test_config.dir/clean:
 CMakeFiles/jaysheng.dir/all:
 	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/depend
 	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=1,2,3,4 "Built target jaysheng"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target jaysheng"
 .PHONY : CMakeFiles/jaysheng.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/jaysheng.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/jaysheng.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 0
 .PHONY : CMakeFiles/jaysheng.dir/rule
@@ -131,40 +189,13 @@ CMakeFiles/jaysheng.dir/clean:
 .PHONY : CMakeFiles/jaysheng.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/test_log.dir
-
-# All Build rule for target.
-CMakeFiles/test_log.dir/all: CMakeFiles/jaysheng.dir/all
-	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/depend
-	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=7,8 "Built target test_log"
-.PHONY : CMakeFiles/test_log.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/test_log.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_log.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 0
-.PHONY : CMakeFiles/test_log.dir/rule
-
-# Convenience name for target.
-test_log: CMakeFiles/test_log.dir/rule
-
-.PHONY : test_log
-
-# clean rule for target.
-CMakeFiles/test_log.dir/clean:
-	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/clean
-.PHONY : CMakeFiles/test_log.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/test_yaml.dir
 
 # All Build rule for target.
 CMakeFiles/test_yaml.dir/all:
 	$(MAKE) -f CMakeFiles/test_yaml.dir/build.make CMakeFiles/test_yaml.dir/depend
 	$(MAKE) -f CMakeFiles/test_yaml.dir/build.make CMakeFiles/test_yaml.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=9,10 "Built target test_yaml"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=16,17 "Built target test_yaml"
 .PHONY : CMakeFiles/test_yaml.dir/all
 
 # Build rule for subdir invocation for target.
@@ -183,6 +214,33 @@ test_yaml: CMakeFiles/test_yaml.dir/rule
 CMakeFiles/test_yaml.dir/clean:
 	$(MAKE) -f CMakeFiles/test_yaml.dir/build.make CMakeFiles/test_yaml.dir/clean
 .PHONY : CMakeFiles/test_yaml.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_thread.dir
+
+# All Build rule for target.
+CMakeFiles/test_thread.dir/all: CMakeFiles/jaysheng.dir/all
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/depend
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/workspace/server/build/CMakeFiles --progress-num=14,15 "Built target test_thread"
+.PHONY : CMakeFiles/test_thread.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_thread.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 9
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_thread.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/workspace/server/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_thread.dir/rule
+
+# Convenience name for target.
+test_thread: CMakeFiles/test_thread.dir/rule
+
+.PHONY : test_thread
+
+# clean rule for target.
+CMakeFiles/test_thread.dir/clean:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/clean
+.PHONY : CMakeFiles/test_thread.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,0 +1,1 @@
+/usr/bin/c++   -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function  -rdynamic CMakeFiles/test_thread.dir/test/test_thread.cpp.o  -o ../bin/test_thread  -L/apps/yoshino/lib  -L/apps/yoshino/lib64 -Wl,-rpath,/apps/yoshino/lib:/apps/yoshino/lib64:/root/workspace/server/lib -pthread ../lib/libjaysheng.so -lyaml-cpp 

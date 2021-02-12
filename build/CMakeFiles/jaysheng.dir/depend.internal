@@ -39,6 +39,13 @@ CMakeFiles/jaysheng.dir/jaysheng/config.cpp.o
  /root/workspace/server/jaysheng/log.h
  /root/workspace/server/jaysheng/singleton.h
  /root/workspace/server/jaysheng/util.h
+CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o
+ /root/workspace/server/jaysheng/fiber.cpp
+ /root/workspace/server/jaysheng/fiber.h
+ /root/workspace/server/jaysheng/log.h
+ /root/workspace/server/jaysheng/macro.h
+ /root/workspace/server/jaysheng/singleton.h
+ /root/workspace/server/jaysheng/util.h
 CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o
  /apps/yoshino/include/yaml-cpp/binary.h
  /apps/yoshino/include/yaml-cpp/dll.h
@@ -77,6 +84,20 @@ CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o
  /root/workspace/server/jaysheng/log.h
  /root/workspace/server/jaysheng/singleton.h
  /root/workspace/server/jaysheng/util.h
+CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o
+ /root/workspace/server/jaysheng/base/noncopy.h
+ /root/workspace/server/jaysheng/mutex.cpp
+ /root/workspace/server/jaysheng/mutex.h
+CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o
+ /root/workspace/server/jaysheng/base/noncopy.h
+ /root/workspace/server/jaysheng/log.h
+ /root/workspace/server/jaysheng/mutex.h
+ /root/workspace/server/jaysheng/singleton.h
+ /root/workspace/server/jaysheng/thread.cpp
+ /root/workspace/server/jaysheng/thread.h
+ /root/workspace/server/jaysheng/util.h
 CMakeFiles/jaysheng.dir/jaysheng/util.cpp.o
+ /root/workspace/server/jaysheng/log.h
+ /root/workspace/server/jaysheng/singleton.h
  /root/workspace/server/jaysheng/util.cpp
  /root/workspace/server/jaysheng/util.h
