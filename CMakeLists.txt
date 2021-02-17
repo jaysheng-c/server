@@ -36,6 +36,7 @@ set(JAYSHENG_LIB jaysheng/log.cpp
                  jaysheng/mutex.cpp
                  jaysheng/thread.cpp
                  jaysheng/fiber.cpp
+                 jaysheng/scheduler.cpp
     )
 
 add_library(jaysheng SHARED ${JAYSHENG_LIB})
@@ -67,3 +68,7 @@ target_link_libraries(test_thread -pthread jaysheng -lyaml-cpp )
 add_executable(test_fiber test/test_fiber.cpp)
 add_dependencies(test_fiber jaysheng)
 target_link_libraries(test_fiber -pthread jaysheng -lyaml-cpp )
+
+add_executable(test_scheduler test/test_scheduler.cpp)
+add_dependencies(test_scheduler jaysheng)
+target_link_libraries(test_scheduler -pthread jaysheng -lyaml-cpp )

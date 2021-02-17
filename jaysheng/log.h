@@ -33,12 +33,14 @@
 #include <tuple>
 
 #include "singleton.h"
+#include "thread.h"
 #include "util.h"
 
-#define JAYSHENG_LOG_LEVEL(logger, level)                                                                                                \
-    if (logger->getLevel() <= level)                                                                                                     \
-    jaysheng::LogEventWrap(jaysheng::LogEvent::ptr(new jaysheng::LogEvent(logger, level, __FILE__, __LINE__, 0, jaysheng::GetThreadId(), \
-                                                                          jaysheng::GetFiberId(), time(0))))                             \
+#define JAYSHENG_LOG_LEVEL(logger, level)                                                                                                 \
+    if (logger->getLevel() <= level)                                                                                                      \
+    jaysheng::LogEventWrap(jaysheng::LogEvent::ptr(new jaysheng::LogEvent(logger, level,                                                  \
+                                                                          __FILE__, __LINE__, 0, jaysheng::GetThreadId(),                 \
+                                                                          jaysheng::GetFiberId(), time(0), jaysheng::Thread::GetName()))) \
         .getSS()
 
 #define JAYSHENG_LOG_DEBUG(logger) JAYSHENG_LOG_LEVEL(logger, jaysheng::LogLevel::DEBUG)
@@ -47,11 +49,11 @@
 #define JAYSHENG_LOG_ERROR(logger) JAYSHENG_LOG_LEVEL(logger, jaysheng::LogLevel::ERROR)
 #define JAYSHENG_LOG_FATAL(logger) JAYSHENG_LOG_LEVEL(logger, jaysheng::LogLevel::FATAL)
 
-#define JAYSHENG_LOG_FMT_LEVEL(logger, level, fmt, ...)                                                                                  \
-    if (logger->getLevel() <= level)                                                                                                     \
-    jaysheng::LogEventWrap(jaysheng::LogEvent::ptr(new jaysheng::LogEvent(logger, level, __FILE__, __LINE__, 0, jaysheng::GetThreadId(), \
-                                                                          jaysheng::GetFiberId(), time(0))))                             \
-        .getEvent()                                                                                                                      \
+#define JAYSHENG_LOG_FMT_LEVEL(logger, level, fmt, ...)                                                                                   \
+    if (logger->getLevel() <= level)                                                                                                      \
+    jaysheng::LogEventWrap(jaysheng::LogEvent::ptr(new jaysheng::LogEvent(logger, level, __FILE__, __LINE__, 0, jaysheng::GetThreadId(),  \
+                                                                          jaysheng::GetFiberId(), time(0), jaysheng::Thread::GetName()))) \
+        .getEvent()                                                                                                                       \
         ->format(fmt, __VA_ARGS__)
 
 #define JAYSHENG_LOG_FMT_DEBUG(logger, fmt, ...) JAYSHENG_LOG_FMT_LEVEL(logger, jaysheng::LogLevel::DEBUG, fmt, __VA_ARGS__)
@@ -88,13 +90,16 @@ class LogEvent {
 public:
     typedef std::shared_ptr<LogEvent> ptr;
 
-    LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level, const char *file, int m_line, unsigned int elapse,
-             unsigned int thread_id, unsigned int fiber_id, unsigned int time);
+    LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level,
+             const char *file, int line, unsigned int elapse,
+             unsigned int thread_id, unsigned int fiber_id,
+             unsigned int time, const std::string &thread_name);
     //~LogEvent();
     const char *getFile() const { return m_file; }
     int getLine() const { return m_line; }
     unsigned int getElapse() const { return m_elapse; }
     unsigned int getThreadId() const { return m_threadId; }
+    std::string getThreadName() const { return m_threadName; }
     unsigned int getFiberId() const { return m_fiberId; }
     unsigned int getTime() const { return m_time; }
     std::string getContent() const { return m_ss.str(); }
@@ -112,6 +117,7 @@ private:
     unsigned int m_threadId = 0;  // 线程id
     unsigned int m_fiberId = 0;   // 协程id
     unsigned int m_time;          // 时间记录
+    std::string m_threadName;
     std::stringstream m_ss;
 
     std::shared_ptr<Logger> m_logger;

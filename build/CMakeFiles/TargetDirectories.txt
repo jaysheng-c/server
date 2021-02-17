@@ -3,6 +3,7 @@
 /root/workspace/server/build/CMakeFiles/test_log.dir
 /root/workspace/server/build/CMakeFiles/test_config.dir
 /root/workspace/server/build/CMakeFiles/rebuild_cache.dir
+/root/workspace/server/build/CMakeFiles/test_scheduler.dir
 /root/workspace/server/build/CMakeFiles/jaysheng.dir
 /root/workspace/server/build/CMakeFiles/test_yaml.dir
 /root/workspace/server/build/CMakeFiles/test_thread.dir

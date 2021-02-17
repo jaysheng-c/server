@@ -120,6 +120,8 @@ private:
 // 互斥锁
 class Mutex : Noncopy {
 public:
+    using Lock = ScopedLock<Mutex>;
+
     Mutex() {
         pthread_mutex_init(&m_mutex, nullptr);
     }
@@ -141,6 +143,9 @@ private:
 // 读写锁
 class RWMutex : public Noncopy {
 public:
+    using ReadLock = ReadScopedLock<RWMutex>;
+    using WriteLock = WriteScopedLock<RWMutex>;
+
     RWMutex() {
         pthread_rwlock_init(&m_lock, nullptr);
     }

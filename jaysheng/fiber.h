@@ -38,6 +38,7 @@ public:
 
     uint64_t id() const { return m_id; }
     STATE state() const { return m_state; }
+    void setState(STATE val) { m_state = val; }
 
     void reset(std::function<void()> cb);
 

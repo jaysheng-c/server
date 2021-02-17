@@ -1,4 +1,5 @@
 #include "util.h"
+#include "fiber.h"
 #include "log.h"
 
 #include <cxxabi.h>
@@ -27,18 +28,18 @@ static std::string demangle(const char *str) {
     return str;
 }
 
-unsigned int GetThreadId() {
+pid_t GetThreadId() {
     return syscall(SYS_gettid);
 }
 
-unsigned int GetFiberId() {
+uint32_t GetFiberId() {
     //#ifdef WIN32
     //		return GetCurrentThreadId();
     //#else
     //		//return pthread_self();
     //		return syscall(SYS_gettid);
     //#endif // WIN32
-    return 0;
+    return jaysheng::Fiber::GetFiberId();
 }
 
 void Backtrace(std::vector<std::string> &bt, int size, int skip) {

@@ -6,3 +6,11 @@
 
 #IncludeRegexTransform: 
 
+/root/workspace/server/test/test_log.cpp
+jaysheng/log.h
+/root/workspace/server/test/jaysheng/log.h
+jaysheng/util.h
+/root/workspace/server/test/jaysheng/util.h
+iostream
+-
+

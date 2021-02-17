@@ -61,6 +61,7 @@ void Fiber::YieldToReady() {
 
 void Fiber::YieldToHold() {
     Fiber::ptr cur = GetThis();
+    JAYSHENG_LOG_DEBUG(g_logger) << "in YieldToHold, fiber_id=" << std::to_string(cur->id());
     JAYSHENG_ASSERT(cur->m_state == EXEC);
     // cur->m_state = HOLD;
     cur->swapOut();

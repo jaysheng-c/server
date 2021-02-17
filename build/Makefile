@@ -153,6 +153,19 @@ test_config/fast:
 .PHONY : test_config/fast
 
 #=============================================================================
+# Target rules for targets named test_scheduler
+
+# Build rule for target.
+test_scheduler: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_scheduler
+.PHONY : test_scheduler
+
+# fast build rule for target.
+test_scheduler/fast:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
+.PHONY : test_scheduler/fast
+
+#=============================================================================
 # Target rules for targets named jaysheng
 
 # Build rule for target.
@@ -298,6 +311,33 @@ jaysheng/mutex.s: jaysheng/mutex.cpp.s
 jaysheng/mutex.cpp.s:
 	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.s
 .PHONY : jaysheng/mutex.cpp.s
+
+jaysheng/scheduler.o: jaysheng/scheduler.cpp.o
+
+.PHONY : jaysheng/scheduler.o
+
+# target to build an object file
+jaysheng/scheduler.cpp.o:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/scheduler.cpp.o
+.PHONY : jaysheng/scheduler.cpp.o
+
+jaysheng/scheduler.i: jaysheng/scheduler.cpp.i
+
+.PHONY : jaysheng/scheduler.i
+
+# target to preprocess a source file
+jaysheng/scheduler.cpp.i:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/scheduler.cpp.i
+.PHONY : jaysheng/scheduler.cpp.i
+
+jaysheng/scheduler.s: jaysheng/scheduler.cpp.s
+
+.PHONY : jaysheng/scheduler.s
+
+# target to generate assembly for a file
+jaysheng/scheduler.cpp.s:
+	$(MAKE) -f CMakeFiles/jaysheng.dir/build.make CMakeFiles/jaysheng.dir/jaysheng/scheduler.cpp.s
+.PHONY : jaysheng/scheduler.cpp.s
 
 jaysheng/thread.o: jaysheng/thread.cpp.o
 
@@ -461,6 +501,33 @@ test/test_log.cpp.s:
 	$(MAKE) -f CMakeFiles/test_log.dir/build.make CMakeFiles/test_log.dir/test/test_log.cpp.s
 .PHONY : test/test_log.cpp.s
 
+test/test_scheduler.o: test/test_scheduler.cpp.o
+
+.PHONY : test/test_scheduler.o
+
+# target to build an object file
+test/test_scheduler.cpp.o:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/test/test_scheduler.cpp.o
+.PHONY : test/test_scheduler.cpp.o
+
+test/test_scheduler.i: test/test_scheduler.cpp.i
+
+.PHONY : test/test_scheduler.i
+
+# target to preprocess a source file
+test/test_scheduler.cpp.i:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/test/test_scheduler.cpp.i
+.PHONY : test/test_scheduler.cpp.i
+
+test/test_scheduler.s: test/test_scheduler.cpp.s
+
+.PHONY : test/test_scheduler.s
+
+# target to generate assembly for a file
+test/test_scheduler.cpp.s:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/test/test_scheduler.cpp.s
+.PHONY : test/test_scheduler.cpp.s
+
 test/test_thread.o: test/test_thread.cpp.o
 
 .PHONY : test/test_thread.o
@@ -499,6 +566,7 @@ help:
 	@echo "... test_log"
 	@echo "... test_config"
 	@echo "... rebuild_cache"
+	@echo "... test_scheduler"
 	@echo "... jaysheng"
 	@echo "... test_yaml"
 	@echo "... test_thread"
@@ -514,6 +582,9 @@ help:
 	@echo "... jaysheng/mutex.o"
 	@echo "... jaysheng/mutex.i"
 	@echo "... jaysheng/mutex.s"
+	@echo "... jaysheng/scheduler.o"
+	@echo "... jaysheng/scheduler.i"
+	@echo "... jaysheng/scheduler.s"
 	@echo "... jaysheng/thread.o"
 	@echo "... jaysheng/thread.i"
 	@echo "... jaysheng/thread.s"
@@ -532,6 +603,9 @@ help:
 	@echo "... test/test_log.o"
 	@echo "... test/test_log.i"
 	@echo "... test/test_log.s"
+	@echo "... test/test_scheduler.o"
+	@echo "... test/test_scheduler.i"
+	@echo "... test/test_scheduler.s"
 	@echo "... test/test_thread.o"
 	@echo "... test/test_thread.i"
 	@echo "... test/test_thread.s"

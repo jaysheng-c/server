@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/root/workspace/server/jaysheng/fiber.cpp" "/root/workspace/server/build/CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o"
   "/root/workspace/server/jaysheng/log.cpp" "/root/workspace/server/build/CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o"
   "/root/workspace/server/jaysheng/mutex.cpp" "/root/workspace/server/build/CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o"
+  "/root/workspace/server/jaysheng/scheduler.cpp" "/root/workspace/server/build/CMakeFiles/jaysheng.dir/jaysheng/scheduler.cpp.o"
   "/root/workspace/server/jaysheng/thread.cpp" "/root/workspace/server/build/CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o"
   "/root/workspace/server/jaysheng/util.cpp" "/root/workspace/server/build/CMakeFiles/jaysheng.dir/jaysheng/util.cpp.o"
   )

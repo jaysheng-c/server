@@ -10,8 +10,8 @@
 
 namespace jaysheng {
 
-unsigned int GetThreadId();
-unsigned int GetFiberId();
+pid_t GetThreadId();
+uint32_t GetFiberId();
 
 /**
  * @brief 获取当前的调用栈

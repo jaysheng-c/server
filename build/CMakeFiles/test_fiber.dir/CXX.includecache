@@ -47,6 +47,8 @@ tuple
 -
 singleton.h
 /root/workspace/server/jaysheng/singleton.h
+thread.h
+/root/workspace/server/jaysheng/thread.h
 util.h
 /root/workspace/server/jaysheng/util.h
 

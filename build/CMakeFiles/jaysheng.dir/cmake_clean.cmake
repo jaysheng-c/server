@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/jaysheng.dir/jaysheng/fiber.cpp.o"
   "CMakeFiles/jaysheng.dir/jaysheng/log.cpp.o"
   "CMakeFiles/jaysheng.dir/jaysheng/mutex.cpp.o"
+  "CMakeFiles/jaysheng.dir/jaysheng/scheduler.cpp.o"
   "CMakeFiles/jaysheng.dir/jaysheng/thread.cpp.o"
   "CMakeFiles/jaysheng.dir/jaysheng/util.cpp.o"
 )
